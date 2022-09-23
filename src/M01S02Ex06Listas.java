@@ -8,7 +8,7 @@ public class M01S02Ex06Listas {
 
         List<Integer> lista = Arrays.asList(1,2,3,4);
 
-        List<Integer> triploLista = new ArrayList<>(4);
+        List<Integer> triploLista = new ArrayList<>();
 
         for (int i=0;i<lista.size();i++){
             triploLista.add(lista.get(i)*3);
