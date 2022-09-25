@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+#pasta de arquivos compilados
+out
+
 # Log file
 *.log
 

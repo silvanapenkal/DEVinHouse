@@ -1,37 +1,43 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class M01S02Ex05EstruturaRepeticaoCondicionais {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Quantos números você quer colocar? ");
-        int size = scanner.nextInt();
-        System.out.println("Insert "+size+" Elements of the Array");
+        Integer [][] numeros = {
+                {56, 65, 64, -3, 23, 42, -15, 65, 14, 32, 78, 70, 47},
+                {1},
+                {1, -1},
+                null,
+                {-2,-2,-2,-2},
+                {20,10, 30}
+        };
 
-        int[] numeros = new int[size];
+        Integer maior;
+        Integer menor;
+        Integer entrada;
 
-
-        for (int i = 0; i < size; i++) {
-            System.out.print("Numero "+i+" : ");
-            numeros[i] = scanner.nextInt();
-        }
-        System.out.println("Números fornecidos:" + Arrays.toString(numeros));
-
-        int maior= numeros[0];
-        int menor= numeros[0];
-
-        for (int i= 0; i< numeros.length;i++){
-            if (menor>numeros[i]){
-                menor= numeros[i];
+        for (int j=0; j< numeros.length;j++){
+            entrada = j+1;
+            System.out.println("Entrada "+entrada);
+            if (numeros[j]==null){
+                System.out.println("Não é possível calcular.");
+                continue;
             }
-            if (maior<numeros[i]){
-                maior= numeros[i];
+            maior= numeros[j][0];
+            menor= numeros[j][0];
+            for (int i=0; i< numeros[j].length;i++){
+
+                     if (menor>numeros[j][i]){
+                        menor= numeros[j][i];
+                    }
+                    if (maior<numeros[j][i]){
+                        maior= numeros[j][i];
+                    }
             }
+            System.out.println("O maior número é: "+maior);
+            System.out.println("O menor número é: "+menor);
+
         }
 
-        System.out.println("O maior número é: "+maior);
-        System.out.println("O menor número é: "+menor);
+
     }
 }
