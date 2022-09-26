@@ -1,7 +1,6 @@
 public class M01S02Ex10EstruturaRepeticao {
 
     public static void main(String[] args) {
-
         String palavra ="AMA";
         String inverso ="";
         for (int i=palavra.length()-1; i>=0;i--){
