@@ -1,25 +1,16 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class M01S02Ex10EstruturaRepeticao {
 
     public static void main(String[] args) {
 
-        List<String > palavra = Arrays.asList("A","M","A");
-        List<String> contrario = new ArrayList<>(palavra.size());
-
-
-        for (int i=palavra.size()-1; i>=0;i--) {
-            contrario.add(palavra.get(i));
+        String palavra ="AMA";
+        String inverso ="";
+        for (int i=palavra.length()-1; i>=0;i--){
+            inverso=inverso+palavra.charAt(i);
         }
-        System.out.println("o contrário é "+contrario);
-        if (contrario.equals(palavra)){
-            System.out.println("'"+palavra+"' é um palíndromo.");
+        if (palavra.equals(inverso)){
+          System.out.println("'"+palavra+"' é um palíndromo.");
         } else {
-            System.out.println("'"+palavra+"' não é um palíndromo.");
+           System.out.println("'"+palavra+"' não é um palíndromo.");
         }
-
-
     }
 }
