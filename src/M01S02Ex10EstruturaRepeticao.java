@@ -11,5 +11,6 @@ public class M01S02Ex10EstruturaRepeticao {
         } else {
            System.out.println("'"+palavra+"' não é um palíndromo.");
         }
+        
     }
 }
